@@ -29,13 +29,13 @@ function Header() {
         <SearchIcon className="header_searchIcon" />
       </div>
       <div className="header_nav">
-        <Link to="/login">
+        <Link to={{ pathname: "/login", state: { user: true } }}>
           <div className="header_option">
             <span
               className="header_optionLineOne"
               onClick={handleAuthenticaton}
             >
-              Hello {user?.email || "Guest"}
+              Hello {!user ? "Guest" : user.email}
             </span>
             <span className="header_optionLineTwo">
               {user ? "Sign Out" : "Sign In"}

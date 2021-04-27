@@ -38,7 +38,7 @@ function Payment() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
-    await stripe
+    const payload = await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
@@ -55,16 +55,17 @@ function Payment() {
             created: paymentIntent.created,
           });
 
-        dispatch({
-          type: "EMPTY_CART",
-        });
-
         setSucceeded(true);
         setError(null);
         setProcessing(false);
 
+        dispatch({
+          type: "EMPTY_CART",
+        });
+
         history.replace("/orders");
       });
+    console.log(payload);
   };
 
   const handleChange = (event) => {
