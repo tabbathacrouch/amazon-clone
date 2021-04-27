@@ -12,7 +12,7 @@ function Order({ order }) {
       <p className="order_id">
         <small>{order.id}</small>
       </p>
-      {order.data.cart?.map((item) => (
+      {order.data.cart?.map((item, i) => (
         <CheckoutProduct
           id={item.id}
           title={item.title}
@@ -20,6 +20,7 @@ function Order({ order }) {
           price={item.price}
           rating={item.rating}
           hideButton
+          key={i}
         />
       ))}
       <CurrencyFormat

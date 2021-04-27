@@ -38,7 +38,7 @@ function Payment() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
-    const payload = await stripe
+    await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
@@ -48,7 +48,7 @@ function Payment() {
         db.collection("users")
           .doc(user?.uid)
           .collection("orders")
-          .doc(paymentIntent.id)
+          .doc("" + paymentIntent.id)
           .set({
             cart: cart,
             amount: paymentIntent.amount,
@@ -120,7 +120,7 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <button disable={processing || disabled || succeeded}>
+                <button disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>

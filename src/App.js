@@ -17,7 +17,7 @@ const promise = loadStripe(
 );
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [user, dispatch] = useStateValue();
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -33,7 +33,7 @@ function App() {
         });
       }
     });
-  }, []);
+  }, [user, dispatch]);
 
   return (
     <Router>
