@@ -48,7 +48,7 @@ function Payment() {
         db.collection("users")
           .doc(user?.uid)
           .collection("orders")
-          .doc("" + paymentIntent.id)
+          .doc(paymentIntent.id)
           .set({
             cart: cart,
             amount: paymentIntent.amount,
@@ -121,7 +121,7 @@ function Payment() {
                   prefix={"$"}
                 />
                 <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                  <span>{processing ? "Processing" : "Buy Now"}</span>
                 </button>
               </div>
               {error && <div>{error}</div>}
