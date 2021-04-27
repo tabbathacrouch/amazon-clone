@@ -60,7 +60,7 @@ function Payment() {
         setProcessing(false);
 
         dispatch({
-          type: "EMPTY_BASKET",
+          type: "EMPTY_CART",
         });
 
         history.replace("/orders");
