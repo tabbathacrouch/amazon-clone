@@ -55,13 +55,13 @@ function Payment() {
             created: paymentIntent.created,
           });
 
-        setSucceeded(true);
-        setError(null);
-        setProcessing(false);
-
         dispatch({
           type: "EMPTY_CART",
         });
+
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
 
         history.replace("/orders");
       });
