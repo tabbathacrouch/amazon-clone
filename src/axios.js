@@ -5,5 +5,4 @@ const instance = axios.create({
 });
 
 export default instance;
-
 //http://localhost:5001/clone-ce4ef/us-central1/api (local)
