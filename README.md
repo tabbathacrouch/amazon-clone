@@ -1,7 +1,10 @@
-AMAZON CLONE
+# AMAZON CLONE
+
 [YouTube Tutorial](https://youtu.be/RDV3Z1KCBvo)
 
 E-Commerce functionality utitilizing [Firebase](https://firebase.google.com/) and [Stripe](https://stripe.com/).
+
+![Screenshot](screenshot.jpg)
 
 # Getting Started with Create React App
 
