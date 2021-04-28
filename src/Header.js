@@ -29,7 +29,7 @@ function Header() {
         <SearchIcon className="header_searchIcon" />
       </div>
       <div className="header_nav">
-        <Link to={{ pathname: "/login", state: { user: true } }}>
+        <Link to={{ pathname: "/login", state: { user: false } }}>
           <div className="header_option">
             <span
               className="header_optionLineOne"

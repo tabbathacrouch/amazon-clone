@@ -1,3 +1,8 @@
+AMAZON CLONE
+[YouTube Tutorial](https://youtu.be/RDV3Z1KCBvo)
+
+E-Commerce functionality utitilizing [Firebase](https://firebase.google.com/) and [Stripe](https://stripe.com/).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
